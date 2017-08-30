@@ -1,0 +1,8 @@
+PUT /public/adres.json?auth=<your key> HTTP/1.1
+Host: <your-app>.firebaseio.com
+Content-Type: application/json
+Accept: application/json
+Cache-Control: no-cache
+
+<put json data>
+
