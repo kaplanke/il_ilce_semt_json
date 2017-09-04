@@ -1,0 +1,29 @@
+<div class="col-md-9 col-md-offset-2">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="city" class="col-form-label">İl</label>
+                <select class="form-control" [(ngModel)]="selectedCity" name="city" (change)="onChangeCity($event.target.value)">
+                    <option *ngFor="let c of cities" [value]="c.il_id">{{c.il_ad}}</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="district" class="col-form-label">İlçe</label>
+                <select class="form-control" [(ngModel)]="selectedDistrict" name="district" (change)="onChangeDistrict($event.target.value)">
+                    <option *ngFor="let d of districts" [value]="d.ilce_id">{{d.ilce_ad}}</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="town" class="col-form-label">Mahalle</label>
+                <select class="form-control" [(ngModel)]="selectedTown" name="district">
+                    <option *ngFor="let t of towns" [value]="t.semt_id">{{t.semt_ad}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <button type="submit" class="btn btn-primary">Ara</button>
+            </div>
+        </div>
+    </form>
+</div>
